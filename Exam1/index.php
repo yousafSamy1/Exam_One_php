@@ -2,12 +2,12 @@
 //11- Use a cookie to change the default website background color. choose the 
 if (isset($_POST['background_color'])) {
     $selected_color = $_POST['background_color'];
-    setcookie('background_color', $selected_color, time() + (86400 * 30), "/"); // Cookie expires in 30 days
-    header("Location: " . $_SERVER['PHP_SELF']); // Redirect to avoid resubmission
+    setcookie('background_color', $selected_color, time() + (86400 * 30), "/"); 
+    header("Location: " . $_SERVER['PHP_SELF']); 
     exit();
 }
 
-$background_color = isset($_COOKIE['background_color']) ? $_COOKIE['background_color'] : '#ffffff'; // Default color: white
+$background_color = isset($_COOKIE['background_color']) ? $_COOKIE['background_color'] : '#ffffff'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
